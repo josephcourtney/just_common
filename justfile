@@ -121,7 +121,6 @@ env:
     print_kv "UV_SYNC_FLAGS" "{{UV_SYNC_FLAGS}}"; \
     print_kv "UV_RUN_FLAGS" "{{UV_RUN_FLAGS}}"; \
     print_kv "PACKAGE" "{{PACKAGE}}"; \
-    print_kv "PYTHON_PACKAGE" "{{PYTHON_PACKAGE}}"; \
     \
     print_section "paths"; \
     print_kv "ROOT_DIR" "{{ROOT_DIR}}"; \
