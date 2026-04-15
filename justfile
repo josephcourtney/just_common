@@ -70,9 +70,8 @@ PYTEST_FAILING_OPTS := "--lf"
 # ======================================================================
 # Meta / Defaults
 # ======================================================================
-
 [private]
-default:
+shared-default:
   @just help
 
 # List available recipes; also the default entry point
