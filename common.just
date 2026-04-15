@@ -10,9 +10,6 @@ VERBOSE := env("VERBOSE", "0") # 0 | 1#
 # Config (overridable via env/.env)
 # ----------------------------------------------------------------------
 
-MODE := env("MODE", "dev") # dev | debug | ci
-VERBOSE := env("VERBOSE", "0") # 0 | 1
-
 PYTEST_CONFIG := ROOT_DIR + "/pyproject.toml"
 IMPORTLINTER_CONFIG := ROOT_DIR + "/import-linter.toml"
 
