@@ -1,10 +1,10 @@
 # Monorepo-aware justfile (uv workspace)
 # ======================================================================
-# Global shell
+# Config (overridable via env/.env)
 # ======================================================================
 
-set shell := ["bash", "-euo", "pipefail", "-c"]
-set dotenv-load := true
+MODE := env("MODE", "dev") # dev | debug | ci
+VERBOSE := env("VERBOSE", "0") # 0 | 1#
 
 # ----------------------------------------------------------------------
 # Config (overridable via env/.env)
@@ -12,9 +12,6 @@ set dotenv-load := true
 
 MODE := env("MODE", "dev") # dev | debug | ci
 VERBOSE := env("VERBOSE", "0") # 0 | 1
-
-ROOT_DIR := justfile_directory()
-PKG_DIR := ROOT_DIR + "/packages"
 
 PYTEST_CONFIG := ROOT_DIR + "/pyproject.toml"
 IMPORTLINTER_CONFIG := ROOT_DIR + "/import-linter.toml"
@@ -967,3 +964,4 @@ ci:
   @MODE=ci just test
   @MODE=ci just cov
   @just _log_end ci
+
